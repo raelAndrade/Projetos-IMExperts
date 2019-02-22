@@ -1,0 +1,21 @@
+<!-- Fixed navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Angular</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['cards']">Cards</a>
+    </li>
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['idolqueryform']">Forms</a>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid text-center pb-5">
+  <div style="text-align:center">
+    <h2>
+      Welcome to {{title}}!
+    </h2>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
