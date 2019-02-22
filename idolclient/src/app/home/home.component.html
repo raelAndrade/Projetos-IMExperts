@@ -1,0 +1,29 @@
+<!-- INÍCIO DO CONTEÚDO -->
+<section class="content-header">
+</section>
+
+<section class="content">
+
+  <div class="jumbotron welcome-jumbotron">
+     <h1>Bem vindo a IMExpets!</h1>
+     <form #idolServiceForm="ngForm" (ngSubmit)="sendToIDOL()">
+      <div class="form-group">
+        <label for="name">Text: </label>
+        <input type="text" class="form-control" id="queryText" required [(ngModel)]="idolRequest.queryText" name="queryText">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+      <hr/>
+      Total: {{idolResponse.total}}
+      <h3>
+        Documentos:  
+        <ul>
+          <li *ngFor="let doc of idolResponse.documents"> 
+              <span class="badge">{{doc.id}}</span> {{doc.summary}}
+          </li>     
+        </ul>
+      </h3>
+    </form>
+  </div>
+
+</section>
+<!-- FIM DO CONTEÚDO -->
